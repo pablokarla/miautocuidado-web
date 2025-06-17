@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Autocuidado</title>
+</head>
+<body>
+
+  <h1>Bienvenido a Mi Autocuidado</h1>
+  <button id="login-google-button">Iniciar Sesión con Google</button>
+  
+  <div id="user-dashboard" style="display: none;">
+    <h2>Hola, <span id="user-email-display"></span>!</h2>
+    <button id="logout-button">Cerrar Sesión</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+  <script>
+    // La configuración de tu proyecto.
+    const firebaseConfig = {
+      apiKey: "AIzaSyCkGa1pZSUjRgRBeMZdL6cBweDbiSrWhy0",
+      authDomain: "miautocuidado-3a570.firebaseapp.com",
+      projectId: "miautocuidado-3a570",
+      storageBucket: "miautocuidado-3a570.firebasestorage.app",
+      messagingSenderId: "919475857466",
+      appId: "1:919475857466:web:59f8a8ee90ee8c97956d03",
+      measurementId: "G-0J6GP14RY5"
+    };
+
+    // Se inicializa Firebase.
+    firebase.initializeApp(firebaseConfig);
+    
+    // Se crea la variable 'auth' para que esté disponible globalmente.
+    const auth = firebase.auth();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
